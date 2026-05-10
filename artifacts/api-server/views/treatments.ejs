@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %> – Kishore Orthopedic Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <%- include('partials/navbar') %>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-tag">What We Offer</span>
+        <h1>Our Treatments</h1>
+        <p>A full spectrum of orthopedic treatments — from conservative management to advanced surgical intervention.</p>
+      </div>
+    </section>
+
+    <!-- Treatment Filter Tabs -->
+    <section class="section">
+      <div class="container">
+        <div class="treatment-tabs">
+          <button class="tab-btn active" data-tab="all">All Treatments</button>
+          <button class="tab-btn" data-tab="surgical">Surgical</button>
+          <button class="tab-btn" data-tab="non-surgical">Non-Surgical</button>
+          <button class="tab-btn" data-tab="rehab">Rehabilitation</button>
+        </div>
+
+        <div class="treatments-grid" id="treatmentsGrid">
+          <div class="treatment-card" data-category="surgical">
+            <div class="treatment-icon">🦵</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Surgical</span>
+              <h3>Knee Replacement</h3>
+              <p>Total or partial knee replacement surgery to relieve severe arthritis pain and restore mobility. We use ceramic and robotic-assisted techniques for precision implant placement.</p>
+              <ul class="treatment-points">
+                <li>Total & Partial Knee Replacement</li>
+                <li>Robotic-Assisted Precision Surgery</li>
+                <li>Minimally Invasive Approach</li>
+                <li>Rapid Recovery Protocol</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="surgical">
+            <div class="treatment-icon">🦴</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Surgical</span>
+              <h3>Hip Replacement</h3>
+              <p>Advanced total hip replacement for patients with severe hip arthritis, fractures or avascular necrosis. Both traditional and anterior approaches available.</p>
+              <ul class="treatment-points">
+                <li>Total & Partial Hip Replacement</li>
+                <li>Anterior Minimally Invasive Approach</li>
+                <li>Ceramic & Metal-on-Poly Implants</li>
+                <li>Same-Day Mobilisation</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="surgical">
+            <div class="treatment-icon">💪</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Surgical</span>
+              <h3>Shoulder Replacement</h3>
+              <p>Total and reverse shoulder replacement for severe arthritis, rotator cuff tears and complex shoulder fractures. Restoring full arm function and pain-free movement.</p>
+              <ul class="treatment-points">
+                <li>Total & Reverse Replacement</li>
+                <li>Anatomic Implant Options</li>
+                <li>Rotator Cuff Repair Integration</li>
+                <li>Comprehensive Post-Op Rehab</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="surgical">
+            <div class="treatment-icon">🔬</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Surgical</span>
+              <h3>Arthroscopy</h3>
+              <p>Minimally invasive keyhole surgery for diagnosing and treating problems inside joints. Smaller incisions, less pain and faster recovery compared to open surgery.</p>
+              <ul class="treatment-points">
+                <li>Knee Arthroscopy & Meniscus Repair</li>
+                <li>Shoulder Arthroscopy & SLAP Repair</li>
+                <li>ACL / PCL Reconstruction</li>
+                <li>Hip Arthroscopy</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="surgical">
+            <div class="treatment-icon">🧠</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Surgical</span>
+              <h3>Spine Surgery</h3>
+              <p>Comprehensive surgical solutions for disc herniations, spinal stenosis, deformities and tumours. Minimally invasive techniques where possible for quicker recovery.</p>
+              <ul class="treatment-points">
+                <li>Discectomy & Laminectomy</li>
+                <li>Spinal Fusion & Fixation</li>
+                <li>Vertebroplasty & Kyphoplasty</li>
+                <li>Scoliosis Correction</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="surgical">
+            <div class="treatment-icon">🩹</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Surgical</span>
+              <h3>Fracture Fixation</h3>
+              <p>Precise surgical fixation of complex fractures using plates, screws, nails and external fixators. Our trauma team is on call 24/7 for emergency fracture care.</p>
+              <ul class="treatment-points">
+                <li>Long Bone Fracture Nailing</li>
+                <li>Periarticular Fracture Plating</li>
+                <li>External Fixation</li>
+                <li>Pelvic & Acetabular Fractures</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="non-surgical">
+            <div class="treatment-icon">💉</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Non-Surgical</span>
+              <h3>Injection Therapy</h3>
+              <p>Targeted injection treatments to relieve pain and inflammation without surgery. Options include cortisone, PRP, hyaluronic acid and nerve blocks.</p>
+              <ul class="treatment-points">
+                <li>Corticosteroid Injections</li>
+                <li>PRP (Platelet-Rich Plasma)</li>
+                <li>Hyaluronic Acid (Visco Supplementation)</li>
+                <li>Ultrasound-Guided Nerve Blocks</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="non-surgical">
+            <div class="treatment-icon">🧲</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Non-Surgical</span>
+              <h3>Orthotics & Bracing</h3>
+              <p>Custom-fitted orthotics, braces and supports to correct deformities, relieve pain and support healing — often avoiding the need for surgery.</p>
+              <ul class="treatment-points">
+                <li>Custom Knee Braces & Unloaders</li>
+                <li>Foot Orthoses (Insoles)</li>
+                <li>Scoliosis Bracing (TLSO)</li>
+                <li>Wrist & Elbow Splints</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="rehab">
+            <div class="treatment-icon">🏃</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Rehabilitation</span>
+              <h3>Physiotherapy</h3>
+              <p>Structured physiotherapy programmes designed by our expert therapists to restore strength, flexibility and function after injury or surgery.</p>
+              <ul class="treatment-points">
+                <li>Post-Surgical Rehabilitation</li>
+                <li>Manual & Manipulative Therapy</li>
+                <li>Electrotherapy (TENS, Ultrasound)</li>
+                <li>Gait Retraining & Balance</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+
+          <div class="treatment-card" data-category="rehab">
+            <div class="treatment-icon">⚡</div>
+            <div class="treatment-body">
+              <span class="treatment-category">Rehabilitation</span>
+              <h3>Sports Rehabilitation</h3>
+              <p>Specialised rehabilitation for athletes focusing on return-to-sport goals, performance enhancement and injury prevention strategies.</p>
+              <ul class="treatment-points">
+                <li>Sport-Specific Functional Training</li>
+                <li>Neuromuscular Re-education</li>
+                <li>Return-to-Play Protocols</li>
+                <li>Injury Prevention Programmes</li>
+              </ul>
+              <a href="/contact" class="btn btn-primary btn-sm">Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Your Journey With Us</span>
+          <h2>How It Works</h2>
+          <p>A clear, caring process from first consultation to full recovery.</p>
+        </div>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Consultation</h3>
+            <p>Meet our specialist for a thorough assessment of your condition, medical history and goals.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Diagnosis</h3>
+            <p>Advanced imaging (X-ray, MRI, CT) and clinical evaluation to pinpoint the exact problem.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Treatment Plan</h3>
+            <p>A personalised, evidence-based plan tailored to your condition, lifestyle and recovery goals.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Recovery</h3>
+            <p>Supported rehabilitation with regular follow-ups until you're back to your best.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

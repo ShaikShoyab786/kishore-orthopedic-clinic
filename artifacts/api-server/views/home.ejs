@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %> – Kishore Orthopedic Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <%- include('partials/navbar') %>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge">Trusted Orthopedic Care Since 2005</span>
+          <h1>Your Path to <span class="text-accent">Pain-Free</span> Living Starts Here</h1>
+          <p>Expert orthopedic care delivered with compassion. From sports injuries to joint replacements, we help you move better and live fuller.</p>
+          <div class="hero__actions">
+            <a href="/contact" class="btn btn-primary btn-lg">Book an Appointment</a>
+            <a href="/treatments" class="btn btn-outline btn-lg">View Treatments</a>
+          </div>
+          <div class="hero__trust">
+            <div class="trust-item">
+              <strong>10,000+</strong>
+              <span>Patients Treated</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <strong>20+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-item">
+              <strong>98%</strong>
+              <span>Success Rate</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__card-stack">
+            <div class="hero__main-card">
+              <div class="hero-icon-circle">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+                  <circle cx="40" cy="40" r="40" fill="#E0F2FE"/>
+                  <path d="M28 40h24M40 28v24" stroke="#0EA5E9" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M24 40a16 16 0 1 1 32 0 16 16 0 0 1-32 0z" stroke="#0369A1" stroke-width="2"/>
+                </svg>
+              </div>
+              <div>
+                <h3>World-Class Orthopedics</h3>
+                <p>Minimally invasive procedures with faster recovery</p>
+              </div>
+            </div>
+            <div class="hero__stat-card hero__stat-card--1">
+              <span class="stat-num">24/7</span>
+              <span class="stat-label">Emergency Care</span>
+            </div>
+            <div class="hero__stat-card hero__stat-card--2">
+              <span class="stat-num">15+</span>
+              <span class="stat-label">Specialists</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What We Treat</span>
+          <h2>Comprehensive Orthopedic Services</h2>
+          <p>From acute injuries to chronic conditions, we provide personalised care using the latest techniques and technology.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card card-hover">
+            <div class="card-icon card-icon--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Joint Replacement</h3>
+            <p>Advanced knee, hip and shoulder replacement surgeries with minimally invasive techniques for faster recovery.</p>
+            <a href="/treatments" class="card-link">Learn more →</a>
+          </div>
+          <div class="card card-hover">
+            <div class="card-icon card-icon--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Sports Medicine</h3>
+            <p>Specialised care for athletes and active individuals — from diagnosis to complete recovery and performance optimisation.</p>
+            <a href="/treatments" class="card-link">Learn more →</a>
+          </div>
+          <div class="card card-hover">
+            <div class="card-icon card-icon--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M9 12l2 2 4-4"/><path d="M5 7l7-7 7 7v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7z"/></svg>
+            </div>
+            <h3>Spine Care</h3>
+            <p>Comprehensive treatment for back pain, disc problems, scoliosis and spinal deformities using non-surgical and surgical options.</p>
+            <a href="/treatments" class="card-link">Learn more →</a>
+          </div>
+          <div class="card card-hover">
+            <div class="card-icon card-icon--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+            </div>
+            <h3>Physiotherapy</h3>
+            <p>Expert physiotherapy and rehabilitation programmes to restore movement, reduce pain and prevent re-injury.</p>
+            <a href="/treatments" class="card-link">Learn more →</a>
+          </div>
+          <div class="card card-hover">
+            <div class="card-icon card-icon--blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Fracture Care</h3>
+            <p>Prompt and precise management of all types of fractures using modern fixation techniques for optimal healing.</p>
+            <a href="/treatments" class="card-link">Learn more →</a>
+          </div>
+          <div class="card card-hover">
+            <div class="card-icon card-icon--teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Arthroscopy</h3>
+            <p>Minimally invasive arthroscopic surgery for knee, shoulder and hip joints with smaller incisions and faster recovery.</p>
+            <a href="/treatments" class="card-link">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section section-alt why-us">
+      <div class="container">
+        <div class="why-us__inner">
+          <div class="why-us__content">
+            <span class="section-tag">Why Choose Us</span>
+            <h2>Care That Goes Beyond Treatment</h2>
+            <p>We believe orthopedic care is about more than fixing bones — it's about restoring the quality of life for every patient and their family.</p>
+            <ul class="why-list">
+              <li>
+                <div class="why-icon">✓</div>
+                <div>
+                  <strong>Expert Surgeons</strong>
+                  <p>Our team of fellowship-trained orthopedic surgeons bring decades of combined experience.</p>
+                </div>
+              </li>
+              <li>
+                <div class="why-icon">✓</div>
+                <div>
+                  <strong>State-of-the-Art Facility</strong>
+                  <p>Equipped with the latest imaging, surgical robots and rehabilitation equipment.</p>
+                </div>
+              </li>
+              <li>
+                <div class="why-icon">✓</div>
+                <div>
+                  <strong>Patient-First Approach</strong>
+                  <p>Every treatment plan is tailored to the individual — your goals, your timeline, your life.</p>
+                </div>
+              </li>
+              <li>
+                <div class="why-icon">✓</div>
+                <div>
+                  <strong>Affordable Care</strong>
+                  <p>Quality orthopedic care shouldn't be out of reach. We work with all major insurers and offer flexible payment.</p>
+                </div>
+              </li>
+            </ul>
+            <a href="/about" class="btn btn-primary">Learn About Us</a>
+          </div>
+          <div class="why-us__visual">
+            <div class="stats-grid">
+              <div class="stat-box">
+                <span class="stat-big">10K+</span>
+                <span>Patients Served</span>
+              </div>
+              <div class="stat-box stat-box--accent">
+                <span class="stat-big">20+</span>
+                <span>Years of Care</span>
+              </div>
+              <div class="stat-box stat-box--accent">
+                <span class="stat-big">15+</span>
+                <span>Specialists</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-big">98%</span>
+                <span>Satisfaction Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Patient Stories</span>
+          <h2>Words From Our Patients</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"After my knee replacement at Kishore Orthopedic, I'm back to playing cricket with my grandchildren. The care was exceptional and the team truly felt like family."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RK</div>
+              <div>
+                <strong>Ramesh Kumar</strong>
+                <span>Knee Replacement Patient</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card testimonial-card--featured">
+            <div class="stars">★★★★★</div>
+            <p>"I came in with a severe sports injury and was back on the field in 3 months. Dr. Kishore and his team were incredibly supportive throughout my recovery journey."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PS</div>
+              <div>
+                <strong>Priya Sharma</strong>
+                <span>Sports Injury Patient</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"The physiotherapy programme here is outstanding. My back pain of 5 years is finally gone. Highly recommend Kishore Orthopedic Centre to everyone."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AV</div>
+              <div>
+                <strong>Anil Varma</strong>
+                <span>Spine Care Patient</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-content">
+            <h2>Ready to Take the First Step?</h2>
+            <p>Book a consultation today and let our expert team create a personalised treatment plan just for you.</p>
+            <div class="cta-actions">
+              <a href="/contact" class="btn btn-white btn-lg">Book Appointment</a>
+              <a href="tel:+919876543210" class="btn btn-outline-white btn-lg">Call Us Now</a>
+            </div>
+          </div>
+          <div class="cta-info">
+            <div class="cta-info-item">
+              <span class="cta-info-icon">📞</span>
+              <div>
+                <strong>+91 98765 43210</strong>
+                <span>Available 24/7</span>
+              </div>
+            </div>
+            <div class="cta-info-item">
+              <span class="cta-info-icon">📍</span>
+              <div>
+                <strong>123, Main Road, Sector 5</strong>
+                <span>Hyderabad, Telangana</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

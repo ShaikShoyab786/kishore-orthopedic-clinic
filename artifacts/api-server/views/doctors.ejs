@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %> – Kishore Orthopedic Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <%- include('partials/navbar') %>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-tag">Meet the Team</span>
+        <h1>Our Expert Doctors</h1>
+        <p>A team of fellowship-trained, award-winning orthopedic specialists dedicated to your recovery and well-being.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3">
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-initials">KS</div>
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. K. Srinivas Kishore</h3>
+              <span class="doctor-specialty">Founder & Chief Orthopedic Surgeon</span>
+              <p>MS Ortho, Fellowship in Joint Replacement (Germany). Over 25 years of experience specialising in complex joint replacement and revision surgeries.</p>
+              <div class="doctor-tags">
+                <span class="tag">Joint Replacement</span>
+                <span class="tag">Revision Surgery</span>
+                <span class="tag">Trauma</span>
+              </div>
+              <a href="/contact" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-initials">RP</div>
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. Rakesh Patel</h3>
+              <span class="doctor-specialty">Senior Orthopedic Surgeon</span>
+              <p>MS Ortho, Fellowship in Spine Surgery (USA). Expert in minimally invasive spine procedures, disc replacement and scoliosis correction.</p>
+              <div class="doctor-tags">
+                <span class="tag">Spine Surgery</span>
+                <span class="tag">Disc Care</span>
+                <span class="tag">Scoliosis</span>
+              </div>
+              <a href="/contact" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-initials">AL</div>
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. Ananya Lakshmi</h3>
+              <span class="doctor-specialty">Sports Medicine Specialist</span>
+              <p>MD, Fellowship in Sports Medicine (Australia). Trusted by professional athletes and sports teams across Telangana for injury management and performance care.</p>
+              <div class="doctor-tags">
+                <span class="tag">Sports Injuries</span>
+                <span class="tag">Arthroscopy</span>
+                <span class="tag">Rehab</span>
+              </div>
+              <a href="/contact" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-initials">VM</div>
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. Vijay Mehta</h3>
+              <span class="doctor-specialty">Pediatric Orthopedic Surgeon</span>
+              <p>MS Ortho, Fellowship in Pediatric Orthopedics (UK). Specialises in growth-related bone conditions, congenital deformities and fracture care in children.</p>
+              <div class="doctor-tags">
+                <span class="tag">Pediatric Ortho</span>
+                <span class="tag">Deformity</span>
+                <span class="tag">Fractures</span>
+              </div>
+              <a href="/contact" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-initials">SR</div>
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. Sunita Reddy</h3>
+              <span class="doctor-specialty">Physiotherapy & Rehabilitation</span>
+              <p>MPT (Musculoskeletal), Certified Hand Therapist. Leads our rehabilitation team with expertise in post-surgical recovery, neurological rehab and manual therapy.</p>
+              <div class="doctor-tags">
+                <span class="tag">Physiotherapy</span>
+                <span class="tag">Rehabilitation</span>
+                <span class="tag">Pain Management</span>
+              </div>
+              <a href="/contact" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-avatar">
+              <div class="avatar-initials">AR</div>
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. Ashok Rao</h3>
+              <span class="doctor-specialty">Trauma & Emergency Orthopedics</span>
+              <p>MS Ortho, Diploma in Trauma Surgery. Expert in complex fracture management, polytrauma care and emergency orthopedic intervention.</p>
+              <div class="doctor-tags">
+                <span class="tag">Trauma</span>
+                <span class="tag">Fractures</span>
+                <span class="tag">Emergency Care</span>
+              </div>
+              <a href="/contact" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Us CTA -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-content">
+            <h2>Not Sure Which Doctor to See?</h2>
+            <p>Our friendly care coordinators will help match you with the right specialist for your condition.</p>
+            <a href="/contact" class="btn btn-white btn-lg">Contact Us for Guidance</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>
