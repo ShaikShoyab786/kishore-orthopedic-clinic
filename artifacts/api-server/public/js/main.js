@@ -54,6 +54,7 @@ function initNavbar() {
 function initTreatmentTabs() {
   const tabs = document.querySelectorAll('.tab-btn');
   const cards = document.querySelectorAll('.treatment-card');
+  const dividers = document.querySelectorAll('.category-divider');
 
   if (!tabs.length) return;
 
@@ -64,12 +65,39 @@ function initTreatmentTabs() {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
+      // Show/hide individual cards
       cards.forEach(card => {
         if (category === 'all' || card.dataset.category === category) {
           card.classList.remove('hidden');
           card.style.animation = 'fadeIn 0.3s ease forwards';
         } else {
           card.classList.add('hidden');
+        }
+      });
+
+      // Show/hide category dividers based on data-show-for attribute
+      dividers.forEach(divider => {
+        const showFor = (divider.dataset.showFor || '').split(' ');
+        if (showFor.includes(category)) {
+          divider.classList.remove('hidden');
+        } else {
+          divider.classList.add('hidden');
+        }
+      });
+
+      // Show/hide entire grid sections
+      const gridMap = {
+        treatmentsGrid:  ['all', 'surgical'],
+        nonSurgicalGrid: ['all', 'non-surgical'],
+        rehabGrid:       ['all', 'rehab'],
+      };
+      Object.entries(gridMap).forEach(([id, allowedTabs]) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (allowedTabs.includes(category)) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
         }
       });
     });
