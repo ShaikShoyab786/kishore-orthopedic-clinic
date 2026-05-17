@@ -1,0 +1,100 @@
+Update only the About page of the Kishore Orthopedic Clinic website using the attached real images and clinic information.
+
+IMPORTANT:
+
+* Do not redesign the full website.
+* Keep the existing modern responsive medical design.
+* Remove fake demo content and replace it with realistic professional clinic information.
+* Keep the page clean, trustworthy, and authentic.
+
+Requirements:
+
+1. Hero Section:
+
+* Replace the current hero background with the attached professional orthopedic/clinic image.
+* Update the heading text from:
+  "Hyderabad's Trusted Choice for Orthopedic Excellence"
+
+to:
+
+"Vijayawada's Trusted Choice for Orthopedic Excellence"
+
+* Add proper dark overlay and CSS styling so text remains clearly visible.
+
+2. Mission/About Section:
+   Replace fake demo paragraph with a realistic professional clinic introduction focused on:
+
+* orthopedic care
+* patient trust
+* advanced treatments
+* compassionate treatment
+* rehabilitation and recovery
+
+Keep the text concise and professional.
+
+3. Our Values Section:
+
+* Replace emojis/icons with the attached professional values images.
+
+* Values:
+
+  * Compassion
+  * Excellence
+  * Integrity
+  * Innovation
+
+* Make the section visually clean and professional.
+
+4. Our Journey / Milestones Section:
+
+* Remove fake milestones and unrealistic demo timeline.
+* Replace with a simple authentic clinic journey section focused on:
+
+  * orthopedic specialization
+  * fellowships
+  * advanced orthopedic expertise
+  * patient-focused care
+
+5. Excellence / Achievements Section:
+
+* Remove fake statistics and demo achievements.
+
+* Instead professionally highlight:
+
+  * Fellowships
+  * International orthopedic training
+  * Spine Surgery Fellowship (Switzerland)
+  * Ilizarov & Limb Reconstruction Fellowship (Kurgan - Russia)
+  * Arthroscopy & Joint Replacement expertise
+
+* Use the attached fellowship and doctor images professionally in this section.
+
+6. Contact & Timing Updates:
+   Update contact details everywhere:
+
+Phone:
+7093571238
+
+Clinic Timings:
+Mon - Sat:
+9:00 AM to 2:00 PM
+6:00 PM to 9:00 PM
+
+Sunday:
+9:00 AM to 2:00 PM
+
+7. Keep:
+
+* clean spacing
+* equal image sizing
+* readable typography
+* mobile responsiveness
+* modern orthopedic clinic feel
+* professional trustworthy medical appearance
+
+Avoid:
+
+* fake statistics
+* exaggerated claims
+* flashy animations
+* cartoon medical graphics

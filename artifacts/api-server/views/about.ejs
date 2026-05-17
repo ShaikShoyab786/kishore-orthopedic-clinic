@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= title %> – Kishore Orthopedic Centre</title>
+  <title><%= title %> – Kishore Orthopedic Clinic</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,35 +13,39 @@
   <%- include('partials/navbar') %>
 
   <main>
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <span class="section-tag">Our Story</span>
-        <h1>About Kishore Orthopedic Centre</h1>
-        <p>Two decades of healing, growing, and caring for the communities we serve.</p>
+    <!-- Page Hero with image background -->
+    <section class="page-hero page-hero--image" style="background-image: url('/images/surgery.png');">
+      <div class="page-hero__overlay"></div>
+      <div class="container page-hero__content" style="text-align:center;">
+        <span class="section-tag section-tag--light">Our Story</span>
+        <h1>Vijayawada's Trusted Choice<br>for Orthopedic Excellence</h1>
+        <p>Specialised orthopedic care — built on international training, advanced techniques and a genuine commitment to every patient's recovery.</p>
       </div>
     </section>
 
-    <!-- Mission -->
+    <!-- Mission / About -->
     <section class="section">
       <div class="container">
         <div class="about-story">
           <div class="about-story__text">
             <span class="section-tag">Our Mission</span>
             <h2>Restoring Lives, One Patient at a Time</h2>
-            <p>Founded in 2005 by Dr. K. Srinivas Kishore, Kishore Orthopedic Centre began with a simple but powerful vision — to bring world-class orthopedic care to every patient, regardless of their background.</p>
-            <p>What started as a small clinic with a big heart has grown into one of Hyderabad's most trusted orthopedic institutions, with a team of 15+ specialists, state-of-the-art facilities and a legacy of over 10,000 successful treatments.</p>
-            <p>We are driven by compassion, guided by evidence-based medicine and committed to making every patient feel heard, respected and cared for throughout their journey back to health.</p>
+            <p>At Kishore Orthopedic Clinic, we believe that every patient deserves expert, compassionate care that treats the whole person — not just the injury. Our practice is built on trust, transparency and a deep respect for the lives we are privileged to help restore.</p>
+            <p>Led by Dr. M. Kishore Kumar, our clinic specialises in complex orthopedic conditions — from spinal disorders and joint replacements to limb reconstruction and sports injuries. Every treatment plan is guided by the latest evidence-based techniques and the surgeon's extensive international fellowship training.</p>
+            <p>From your first consultation through surgery and into rehabilitation, we are with you at every step — focused on one goal: getting you back to the life you love.</p>
           </div>
           <div class="about-story__visual">
             <div class="about-visual-card">
-              <div class="about-icon-large">🏥</div>
-              <h3>Kishore Orthopedic Centre</h3>
-              <p>Hyderabad's Trusted Choice for Orthopedic Excellence</p>
+              <div class="about-visual-card__logo">
+                <img src="/images/logo.png" alt="Kishore Orthopedic Clinic" style="width:72px;height:72px;object-fit:contain;" />
+              </div>
+              <h3>Kishore Orthopedic Clinic</h3>
+              <p style="font-size:0.9rem;color:#64748b;margin-bottom:1.25rem;">Sri Devi Apartments, Old Checkpost<br>Vijayawada – 520007</p>
               <div class="about-badges">
-                <span class="about-badge">NABH Accredited</span>
-                <span class="about-badge">ISO Certified</span>
-                <span class="about-badge">Award Winning</span>
+                <span class="about-badge">MS / DNB Ortho</span>
+                <span class="about-badge">MCH Ortho</span>
+                <span class="about-badge">FISS Spine</span>
+                <span class="about-badge">4 Int'l Fellowships</span>
               </div>
             </div>
           </div>
@@ -58,22 +62,30 @@
         </div>
         <div class="grid grid-4">
           <div class="value-card">
-            <div class="value-icon">❤️</div>
+            <div class="value-img-wrap">
+              <img src="/images/compassion.jpg" alt="Compassion" class="value-img" />
+            </div>
             <h3>Compassion</h3>
             <p>We treat every patient with the warmth and empathy we would want for our own family members.</p>
           </div>
           <div class="value-card">
-            <div class="value-icon">🎯</div>
+            <div class="value-img-wrap">
+              <img src="/images/excellence.jpg" alt="Excellence" class="value-img value-img--pad" />
+            </div>
             <h3>Excellence</h3>
             <p>We continuously raise the bar on surgical outcomes, patient experience and clinical standards.</p>
           </div>
           <div class="value-card">
-            <div class="value-icon">🤝</div>
+            <div class="value-img-wrap">
+              <img src="/images/integrity.jpg" alt="Integrity" class="value-img value-img--pad" />
+            </div>
             <h3>Integrity</h3>
             <p>Honest, transparent communication and ethical practice are the foundation of every patient relationship.</p>
           </div>
           <div class="value-card">
-            <div class="value-icon">🔬</div>
+            <div class="value-img-wrap">
+              <img src="/images/innovation.jpg" alt="Innovation" class="value-img" />
+            </div>
             <h3>Innovation</h3>
             <p>We embrace the latest medical advances to offer our patients safer, faster and more effective treatments.</p>
           </div>
@@ -81,80 +93,101 @@
       </div>
     </section>
 
-    <!-- Milestones -->
+    <!-- Our Journey -->
     <section class="section">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Our Journey</span>
-          <h2>Milestones That Define Us</h2>
+          <h2>A Career Built on Specialisation</h2>
         </div>
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-year">2005</div>
+            <div class="timeline-year">MS / DNB</div>
             <div class="timeline-content">
-              <h3>Founded</h3>
-              <p>Dr. K. Srinivas Kishore established the centre with 3 doctors and a mission to provide accessible, expert orthopedic care.</p>
+              <h3>Postgraduate Orthopedic Training</h3>
+              <p>Completed advanced postgraduate training in orthopedics and traumatology, gaining a strong foundation in surgical techniques and patient management.</p>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2010</div>
+            <div class="timeline-year">MCH</div>
             <div class="timeline-content">
-              <h3>NABH Accreditation</h3>
-              <p>Received prestigious NABH accreditation, cementing our commitment to the highest standards of patient safety and quality.</p>
+              <h3>Super-Speciality in Orthopedics</h3>
+              <p>Pursued MCH in Orthopedics — one of the highest surgical qualifications — focusing on complex reconstructive and joint procedures.</p>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2015</div>
+            <div class="timeline-year">Russia</div>
             <div class="timeline-content">
-              <h3>Advanced Surgical Suite</h3>
-              <p>Opened our fully-equipped advanced surgical suite with robotic assistance capabilities and 3D imaging systems.</p>
+              <h3>Ilizarov Fellowship — Kurgan, Russia</h3>
+              <p>International fellowship at the Russian Scientific Centre "Named after Ilizarov" — mastering the Ilizarov method for limb lengthening, deformity correction and bone reconstruction.</p>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2020</div>
+            <div class="timeline-year">Switzerland</div>
             <div class="timeline-content">
-              <h3>Sports Medicine Department</h3>
-              <p>Launched a dedicated sports medicine and performance rehabilitation department, becoming the preferred centre for athletes.</p>
+              <h3>Spine Surgery Fellowship — FISS</h3>
+              <p>Completed the Fellowship of the International Spine Study Group (FISS) in Switzerland, specialising in complex spinal surgeries and minimally invasive techniques.</p>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year">2025</div>
+            <div class="timeline-year">Vijayawada</div>
             <div class="timeline-content">
-              <h3>10,000 Patients Milestone</h3>
-              <p>Celebrated the treatment of our 10,000th patient — a testament to the trust our community places in us.</p>
+              <h3>Kishore Orthopedic Clinic</h3>
+              <p>Established a dedicated orthopedic practice in Vijayawada, bringing international-level expertise to patients across Andhra Pradesh and neighbouring regions.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Accreditations -->
+    <!-- International Fellowship Showcase -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Accreditations & Awards</span>
-          <h2>Recognised for Excellence</h2>
-        </div>
-        <div class="accreditation-grid">
-          <div class="accreditation-card">
-            <div class="accreditation-icon">🏆</div>
-            <h4>Best Orthopedic Hospital</h4>
-            <p>Hyderabad Healthcare Awards 2023</p>
+        <div class="fellowship-section">
+          <div class="fellowship-content">
+            <span class="section-tag">International Training</span>
+            <h2>Fellowship-Trained at World-Class Institutions</h2>
+            <p style="color:#64748b;margin-bottom:1.5rem;">Dr. M. Kishore Kumar holds four international fellowships — a rare distinction that brings globally proven surgical techniques directly to patients in Vijayawada.</p>
+            <ul class="fellowship-list">
+              <li>
+                <div class="fellowship-icon">✦</div>
+                <div>
+                  <strong>Ilizarov & Limb Reconstruction</strong>
+                  <span>Russian Scientific Centre "Named after Ilizarov", Kurgan, Russia</span>
+                </div>
+              </li>
+              <li>
+                <div class="fellowship-icon">✦</div>
+                <div>
+                  <strong>Spine Surgery — FISS</strong>
+                  <span>Fellowship of International Spine Study Group, Switzerland</span>
+                </div>
+              </li>
+              <li>
+                <div class="fellowship-icon">✦</div>
+                <div>
+                  <strong>Arthroscopy & Joint Replacement</strong>
+                  <span>Advanced arthroscopic techniques and minimally invasive joint procedures</span>
+                </div>
+              </li>
+              <li>
+                <div class="fellowship-icon">✦</div>
+                <div>
+                  <strong>Complex Trauma & Reconstruction</strong>
+                  <span>Flap coverage, bone reconstruction and polytrauma management</span>
+                </div>
+              </li>
+            </ul>
+            <div class="expertise-actions">
+              <a href="/doctors" class="btn btn-primary">Meet Dr. Kishore</a>
+              <a href="/contact" class="btn btn-outline">Book a Consultation</a>
+            </div>
           </div>
-          <div class="accreditation-card">
-            <div class="accreditation-icon">✅</div>
-            <h4>NABH Accredited</h4>
-            <p>National Accreditation Board for Hospitals</p>
-          </div>
-          <div class="accreditation-card">
-            <div class="accreditation-icon">🌟</div>
-            <h4>ISO 9001:2015 Certified</h4>
-            <p>Quality Management Systems</p>
-          </div>
-          <div class="accreditation-card">
-            <div class="accreditation-icon">🎖️</div>
-            <h4>Excellence in Patient Care</h4>
-            <p>Telangana Medical Council 2022</p>
+          <div class="fellowship-image">
+            <img src="/images/kishore-russia.png" alt="Dr. M. Kishore Kumar at the Ilizarov Centre, Kurgan Russia" class="fellowship-img" />
+            <div class="fellowship-caption">
+              Dr. M. Kishore Kumar receiving his fellowship certificate at the Russian Scientific Centre "Named after Ilizarov", Kurgan, Russia
+            </div>
           </div>
         </div>
       </div>
