@@ -1,0 +1,78 @@
+Update the existing Kishore Orthopedic Clinic website using the provided real clinic information and attached images.
+
+IMPORTANT:
+
+* Do not redesign the website.
+* Keep the current modern clean responsive orthopedic clinic design.
+* Focus on realism, professionalism, and visual consistency.
+
+Requirements:
+
+1. About Page – Our Journey Section:
+   Replace the current timeline/journey section with the real academic and fellowship background of Dr. M. Kishore Kumar.
+
+Display professionally and clearly:
+
+* MBBS – Rangaraya Medical College, Kakinada
+* MS (Ortho) – Andhra Medical College, Visakhapatnam
+* DNB (Ortho) – K.S Hegde Medical Academy, Mangalore
+* MCH (Ortho) – University of Seychelles American Institute of Medicine (USAIM)
+
+Fellowships:
+
+* Fellow in Arthroscopy – Aware Global Hospital, Hyderabad
+* Fellow in Arthroplasty – Sunshine Hospital, Secunderabad
+* Fellow in Ilizarov & Limb Reconstruction – Russian Ilizarov Scientific Center, Kurgan, Russia
+* Fellow in Spine Surgery – Cantonal Hospital Fribourg, Switzerland
+
+Make this section elegant, readable, and professional.
+
+2. About Page CTA:
+   Replace:
+   "Book a Consultation"
+
+with:
+"Contact Clinic"
+
+3. Homepage – What We Treat Section:
+
+* Replace emojis/icons with the uploaded real treatment images.
+* Use the same professional treatment styling used in the Treatments page.
+* Display the real orthopedic treatments consistently.
+
+4. Homepage – Why Choose Us Section:
+   Remove fake demo statistics and unrealistic data.
+   Replace with realistic professional highlights such as:
+
+* Advanced Orthopedic Care
+* International Fellowship Training
+* Specialized Spine & Joint Expertise
+* Compassionate Patient Care
+* Rehabilitation Support
+
+5. Doctors Page:
+
+* Add the attached professional doctor background image in the hero section.
+* Add proper dark overlay and CSS styling for readable text.
+* Keep the page clean and premium.
+
+6. Contact Page:
+
+* Add the attached professional contact/clinic background image in the hero section.
+* Ensure proper readability and responsive styling.
+
+7. Keep:
+
+* equal image sizing
+* clean spacing
+* professional orthopedic branding
+* mobile responsiveness
+* modern typography
+* trustworthy medical appearance
+
+Avoid:
+
+* fake statistics
+* overcrowded sections
+* flashy animations
+* unrealistic claims

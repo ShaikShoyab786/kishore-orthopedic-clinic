@@ -232,6 +232,45 @@ img { max-width: 100%; display: block; }
 
 .card-link:hover { color: #0369a1; }
 
+/* Service Cards (Homepage — image on top) */
+.service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-img-wrap {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-img { transform: scale(1.05); }
+
+.service-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-body h3 { margin-bottom: 0.5rem; font-size: 1rem; }
+.service-body p { font-size: 0.9rem; color: #64748b; margin-bottom: 1rem; flex: 1; }
+.service-body .card-link { margin-top: auto; }
+
 /* ===============================
    NAVBAR
    =============================== */
@@ -634,6 +673,39 @@ img { max-width: 100%; display: block; }
 .why-list strong { display: block; color: #0f172a; margin-bottom: 0.2rem; }
 .why-list p { font-size: 0.9rem; color: #64748b; }
 
+/* Why Choose Us — fellowship image highlight card */
+.why-us__highlight-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 56px rgba(3, 105, 161, 0.15), 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.why-us__highlight-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.why-us__highlight-caption {
+  background: #f0f9ff;
+  border-top: 1px solid #bae6fd;
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+
+.why-us__highlight-caption strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #0f172a;
+  margin-bottom: 0.15rem;
+}
+
+.why-us__highlight-caption span {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -935,6 +1007,96 @@ img { max-width: 100%; display: block; }
 }
 
 .value-icon { font-size: 2.25rem; margin-bottom: 1rem; }
+
+/* Journey / Qualifications Grid (About page) */
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 860px) {
+  .journey-grid {
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0 3rem;
+  }
+}
+
+.journey-divider {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .journey-divider {
+    display: block;
+    background: #e2e8f0;
+    width: 1px;
+    align-self: stretch;
+  }
+}
+
+.journey-col__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0369a1;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #e0f2fe;
+}
+
+.journey-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.journey-badge {
+  flex-shrink: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.journey-badge--degree {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.journey-badge--fellow {
+  background: #ccfbf1;
+  color: #0d9488;
+  border: 1px solid #99f6e4;
+}
+
+.journey-badge--intl {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.journey-item__content strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.journey-item__content span {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.4;
+}
 
 /* Fellowship Section */
 .fellowship-section {
