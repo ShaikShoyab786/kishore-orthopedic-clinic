@@ -104,7 +104,7 @@ function initTreatmentTabs() {
   });
 }
 
-/* ---- Contact Form Submission ---- */
+/* ---- Contact Form → WhatsApp Redirect ---- */
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const successMsg = document.getElementById('formSuccess');
@@ -134,15 +134,34 @@ function initContactForm() {
 
     if (!isValid) return;
 
-    // Simulate successful submission
+    // Build patient details from form fields
+    const firstName  = (form.querySelector('#firstName')?.value  || '').trim();
+    const lastName   = (form.querySelector('#lastName')?.value   || '').trim();
+    const phone      = (form.querySelector('#phone')?.value      || '').trim();
+    const department = (form.querySelector('#department')?.value || '').trim();
+    const message    = (form.querySelector('#message')?.value    || '').trim();
+
+    const fullName = [firstName, lastName].filter(Boolean).join(' ');
+
+    let waText = `Hello Kishore Orthopedic Clinic,\n\n`;
+    waText += `Name: ${fullName}\n`;
+    waText += `Phone: ${phone}\n`;
+    if (department) waText += `Department: ${department}\n`;
+    waText += `\nMessage:\n${message}\n\n`;
+    waText += `I would like to contact the clinic.`;
+
+    const waUrl = `https://wa.me/917093571238?text=${encodeURIComponent(waText)}`;
+
+    // Show brief sending state then open WhatsApp
     const submitBtn = form.querySelector('[type="submit"]');
-    submitBtn.textContent = 'Sending...';
+    submitBtn.textContent = 'Opening WhatsApp...';
     submitBtn.disabled = true;
 
     setTimeout(() => {
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
       form.style.display = 'none';
       if (successMsg) successMsg.style.display = 'block';
-    }, 1200);
+    }, 600);
   });
 }
 
