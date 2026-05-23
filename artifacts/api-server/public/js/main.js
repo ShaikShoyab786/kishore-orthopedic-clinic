@@ -143,7 +143,7 @@ function initContactForm() {
 
     const fullName = [firstName, lastName].filter(Boolean).join(' ');
 
-    let waText = `Hello Kishore Orthopedic Clinic,\n\n`;
+    let waText = `Hello Kishore Orthopedic Centre,\n\n`;
     waText += `Name: ${fullName}\n`;
     waText += `Phone: ${phone}\n`;
     if (department) waText += `Department: ${department}\n`;
