@@ -1400,6 +1400,19 @@ img { max-width: 100%; display: block; }
   border-radius: 999px;
 }
 
+.tag--featured {
+  background: linear-gradient(135deg, #0369a1, #0ea5e9);
+  color: #ffffff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.73rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(3, 105, 161, 0.25);
+}
+
 /* ===============================
    DOCTOR PROFILE (Single)
    =============================== */
