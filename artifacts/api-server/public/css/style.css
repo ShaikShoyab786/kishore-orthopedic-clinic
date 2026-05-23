@@ -1098,6 +1098,121 @@ img { max-width: 100%; display: block; }
   line-height: 1.4;
 }
 
+/* About Page — Previous Experience Block */
+.about-exp-block {
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 2px solid #e0f2fe;
+}
+
+.about-exp-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.about-exp-header__icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0369a1, #0ea5e9);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-exp-header__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0369a1;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.about-exp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+}
+
+@media (min-width: 700px) {
+  .about-exp-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-exp-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(3, 105, 161, 0.07);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.about-exp-card:hover {
+  box-shadow: 0 6px 20px rgba(3, 105, 161, 0.13);
+  transform: translateY(-2px);
+}
+
+.about-exp-card__accent {
+  height: 4px;
+  background: linear-gradient(90deg, #0369a1, #0ea5e9);
+}
+
+.about-exp-card__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem 1.4rem;
+}
+
+.about-exp-card__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #e0f2fe;
+  color: #0369a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.about-exp-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.about-exp-card__role {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.35;
+}
+
+.about-exp-card__dept {
+  font-size: 0.8rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.about-exp-card__org {
+  font-size: 0.79rem;
+  color: #0369a1;
+  font-weight: 600;
+  margin-top: 0.1rem;
+}
+
 /* Fellowship Section */
 .fellowship-section {
   display: grid;
