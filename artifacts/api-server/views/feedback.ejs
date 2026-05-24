@@ -13,9 +13,10 @@
   <%- include('partials/navbar') %>
 
   <main>
-    <section class="page-hero page-hero--light">
+    <section class="page-hero page-hero--image feedback-hero" style="background-image: url('/images/feedback-hero.jpg');">
+      <div class="page-hero__overlay feedback-hero__overlay"></div>
       <div class="container page-hero__content" style="text-align:center;">
-        <span class="section-tag">Patient Voice</span>
+        <span class="section-tag section-tag--light">Patient Voice</span>
         <h1>Share Your Experience</h1>
         <p>Your feedback helps us improve and helps other patients make informed decisions about their care.</p>
       </div>
@@ -91,22 +92,22 @@
 
           <aside class="feedback-aside">
             <div class="feedback-aside-card">
-              <div class="feedback-aside-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <div class="feedback-aside-card__img-wrap">
+                <img src="/images/feedback-privacy.jpg" alt="Privacy and security" loading="lazy" />
               </div>
               <h3>Your Privacy Matters</h3>
               <p>Your feedback is reviewed by our team before being published. We never share personal details without consent.</p>
             </div>
             <div class="feedback-aside-card">
-              <div class="feedback-aside-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              <div class="feedback-aside-card__img-wrap">
+                <img src="/images/feedback-helping.jpg" alt="Helping future patients" loading="lazy" />
               </div>
               <h3>Helping Future Patients</h3>
               <p>Genuine patient reviews help others in Vijayawada make confident decisions about their orthopedic care.</p>
             </div>
             <div class="feedback-aside-card">
-              <div class="feedback-aside-card__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="28" height="28"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div class="feedback-aside-card__img-wrap">
+                <img src="/images/feedback-time.jpg" alt="Moderation timeline" loading="lazy" />
               </div>
               <h3>Moderation Takes 24–48 Hours</h3>
               <p>Approved feedback appears on our homepage. We respond to all reviews with a professional hospital reply.</p>
