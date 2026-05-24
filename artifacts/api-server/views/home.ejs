@@ -191,41 +191,80 @@
         <div class="section-header">
           <span class="section-tag">Patient Stories</span>
           <h2>Words From Our Patients</h2>
+          <p>Real experiences from the patients we have had the privilege to treat.</p>
         </div>
+
+        <% if (testimonials && testimonials.length > 0) { %>
+        <div class="testimonial-carousel" id="testimonialCarousel">
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track">
+              <% testimonials.forEach(function(fb) {
+                   var initials = fb.patientName.split(' ').map(function(w){return w[0]||'';}).join('').toUpperCase().slice(0,2);
+                   var filled = '★'.repeat(fb.rating);
+                   var empty  = '☆'.repeat(5 - fb.rating);
+              %>
+              <div class="testimonial-card">
+                <div class="tc-stars">
+                  <span class="tc-stars__filled"><%= filled %></span><span class="tc-stars__empty"><%= empty %></span>
+                </div>
+                <p class="tc-message">"<%= fb.message %>"</p>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><%= initials %></div>
+                  <div>
+                    <strong><%= fb.patientName %></strong>
+                    <span><%= fb.treatment %></span>
+                  </div>
+                </div>
+                <% if (fb.hospitalReply) { %>
+                <div class="hospital-reply">
+                  <span class="hospital-reply__label">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    Hospital Reply
+                  </span>
+                  <p><%= fb.hospitalReply %></p>
+                </div>
+                <% } %>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-prev" aria-label="Previous slide">&#8249;</button>
+            <div class="carousel-dots"></div>
+            <button class="carousel-next" aria-label="Next slide">&#8250;</button>
+          </div>
+        </div>
+        <% } else { %>
         <div class="grid grid-3">
           <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>"After my knee replacement at Kishore Orthopedic Centre, I'm back to playing cricket with my grandchildren. The care was exceptional and the team truly felt like family."</p>
+            <div class="tc-stars"><span class="tc-stars__filled">★★★★★</span></div>
+            <p class="tc-message">"After my knee replacement at Kishore Orthopedic Centre, I'm back to playing cricket with my grandchildren. The care was exceptional and the team truly felt like family."</p>
             <div class="testimonial-author">
               <div class="author-avatar">RK</div>
-              <div>
-                <strong>Ramesh Kumar</strong>
-                <span>Knee Replacement Patient</span>
-              </div>
+              <div><strong>Ramesh Kumar</strong><span>Knee Replacement Patient</span></div>
             </div>
           </div>
           <div class="testimonial-card testimonial-card--featured">
-            <div class="stars">★★★★★</div>
-            <p>"I came in with a severe sports injury and was back on the field in 3 months. Dr. Kishore and his team were incredibly supportive throughout my recovery journey."</p>
+            <div class="tc-stars"><span class="tc-stars__filled">★★★★★</span></div>
+            <p class="tc-message">"I came in with a severe sports injury and was back on the field in 3 months. Dr. Kishore and his team were incredibly supportive throughout my recovery journey."</p>
             <div class="testimonial-author">
               <div class="author-avatar">PS</div>
-              <div>
-                <strong>Priya Sharma</strong>
-                <span>Sports Injury Patient</span>
-              </div>
+              <div><strong>Priya Sharma</strong><span>Sports Injury Patient</span></div>
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>"The physiotherapy programme here is outstanding. My back pain of 5 years is finally gone. Highly recommend Kishore Orthopedic Centre to everyone in Vijayawada."</p>
+            <div class="tc-stars"><span class="tc-stars__filled">★★★★★</span></div>
+            <p class="tc-message">"The physiotherapy programme here is outstanding. My back pain of 5 years is finally gone. Highly recommend Kishore Orthopedic Centre to everyone in Vijayawada."</p>
             <div class="testimonial-author">
               <div class="author-avatar">AV</div>
-              <div>
-                <strong>Anil Varma</strong>
-                <span>Spine Care Patient</span>
-              </div>
+              <div><strong>Anil Varma</strong><span>Spine Care Patient</span></div>
             </div>
           </div>
+        </div>
+        <% } %>
+
+        <div class="testimonials-cta">
+          <a href="/feedback" class="btn btn-outline">Share Your Experience →</a>
         </div>
       </div>
     </section>

@@ -1,0 +1,159 @@
+Upgrade the patient feedback/testimonials system of the Kishore Orthopedic Centre website from static sample HTML data to a real dynamic PostgreSQL-based feedback system.
+
+IMPORTANT:
+
+* Keep the current testimonial section placement on the homepage exactly where it is now (before the footer).
+* Maintain the existing professional medical design style.
+* Make the testimonials section visually premium, modern, and engaging.
+
+---
+
+FEATURE REQUIREMENTS
+
+1. Dynamic Feedback System
+   Replace the hardcoded/sample testimonial data with dynamic PostgreSQL database data.
+
+Create a PostgreSQL feedback table with fields such as:
+
+* id
+* patient_name
+* treatment
+* rating
+* message
+* hospital_reply
+* status
+* created_at
+
+Only display feedbacks where:
+status = approved
+
+---
+
+2. Feedback Submission Page
+
+Create a new route/page:
+
+/feedback
+
+This page should include a professional patient feedback form with:
+
+* Patient Name
+* Treatment Taken
+* Star Rating (1-5)
+* Feedback Message
+
+Submit Button:
+"Submit Feedback"
+
+After submission:
+
+* Save feedback into PostgreSQL
+* Default status should be:
+  pending
+
+Show success message:
+"Thank you for sharing your feedback."
+
+---
+
+3. Homepage Testimonials Section
+
+Keep the testimonials section on the homepage in the same location.
+
+Replace static sample cards with dynamically fetched approved feedbacks from PostgreSQL.
+
+Design Requirements:
+
+* professional testimonial cards
+* modern orthopedic medical styling
+* smooth shadows and rounded corners
+* elegant typography
+* responsive layout
+
+---
+
+4. Star Rating Design
+
+Display star ratings beautifully using:
+★★★★★
+
+Requirements:
+
+* visually attractive stars
+* premium medical website feel
+* clean spacing and alignment
+
+---
+
+5. Auto Scroll / Carousel Effect
+
+Add a smooth professional auto-scrolling testimonial carousel.
+
+Requirements:
+
+* testimonials auto-scroll every 5 seconds
+* smooth transition animations
+* pause on hover
+* responsive on mobile devices
+* professional modern movement
+* no flashy animations
+
+---
+
+6. Admin Feedback Management
+
+Create a simple hidden admin page:
+
+/admin-feedback
+
+This page should allow staff/hospital admin to:
+
+* view submitted feedbacks
+* approve feedbacks
+* delete spam feedbacks
+* add professional hospital replies
+
+Only approved feedbacks should appear publicly on homepage.
+
+---
+
+7. Hospital Reply Display
+
+If a hospital reply exists, display it professionally under the feedback card.
+
+Example:
+
+Hospital Reply:
+"Thank you for your valuable feedback."
+
+Style:
+
+* subtle highlighted box
+* professional hospital tone
+* visually clean
+
+---
+
+8. Technical Requirements
+
+Use:
+
+* Express.js
+* EJS
+* PostgreSQL
+
+Maintain:
+
+* existing project structure
+* responsive layout
+* clean code organization
+* professional UI consistency
+
+Avoid:
+
+* redesigning unrelated pages
+* overly flashy animations
+* cluttered admin dashboard
+* unnecessary complexity
+
+The final feedback system should feel like a clean modern hospital review and patient trust system.

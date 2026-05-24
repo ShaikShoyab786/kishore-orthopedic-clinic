@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Management — Kishore Orthopedic Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="admin-body">
+
+  <div class="admin-page">
+    <div class="admin-topbar">
+      <div class="admin-topbar__brand">
+        <img src="/images/logo.png" alt="KOC" width="36" height="36" style="object-fit:contain;" />
+        <span>Kishore Orthopedic Centre — Feedback Management</span>
+      </div>
+      <a href="/" class="admin-topbar__link">← View Site</a>
+    </div>
+
+    <div class="admin-content">
+      <div class="admin-stats-row">
+        <div class="admin-stat-box">
+          <span class="admin-stat-box__num"><%= feedbacks.filter(function(f){return f.status==='pending';}).length %></span>
+          <span class="admin-stat-box__label">Pending</span>
+        </div>
+        <div class="admin-stat-box admin-stat-box--approved">
+          <span class="admin-stat-box__num"><%= feedbacks.filter(function(f){return f.status==='approved';}).length %></span>
+          <span class="admin-stat-box__label">Published</span>
+        </div>
+        <div class="admin-stat-box admin-stat-box--total">
+          <span class="admin-stat-box__num"><%= feedbacks.length %></span>
+          <span class="admin-stat-box__label">Total</span>
+        </div>
+      </div>
+
+      <% if (feedbacks.length === 0) { %>
+      <div class="admin-empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5" width="48" height="48"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <p>No feedback submitted yet. Share the feedback form link with patients.</p>
+        <code style="background:#f1f5f9;padding:.4rem .8rem;border-radius:6px;font-size:.85rem;">/feedback</code>
+      </div>
+      <% } else { %>
+      <div class="admin-fb-list">
+        <% feedbacks.forEach(function(fb) {
+             var initials = fb.patientName.split(' ').map(function(w){return w[0]||'';}).join('').toUpperCase().slice(0,2);
+             var filled = '★'.repeat(fb.rating);
+             var empty  = '☆'.repeat(5 - fb.rating);
+             var dateStr = new Date(fb.createdAt).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'});
+        %>
+        <div class="admin-fb-card admin-fb-card--<%= fb.status %>">
+          <div class="admin-fb-card__top">
+            <div class="admin-fb-card__author">
+              <div class="admin-author-avatar"><%= initials %></div>
+              <div>
+                <strong><%= fb.patientName %></strong>
+                <span class="admin-fb-treatment"><%= fb.treatment %></span>
+              </div>
+            </div>
+            <div class="admin-fb-card__right">
+              <div class="admin-stars"><%= filled %><span class="admin-stars__empty"><%= empty %></span></div>
+              <span class="admin-status-badge admin-status-badge--<%= fb.status %>"><%= fb.status %></span>
+              <span class="admin-fb-date"><%= dateStr %></span>
+            </div>
+          </div>
+
+          <p class="admin-fb-message">"<%= fb.message %>"</p>
+
+          <% if (fb.hospitalReply) { %>
+          <div class="admin-fb-existing-reply">
+            <strong>Current Reply:</strong> <%= fb.hospitalReply %>
+          </div>
+          <% } %>
+
+          <div class="admin-fb-card__actions">
+            <% if (fb.status !== 'approved') { %>
+            <form method="POST" action="/admin-feedback/approve/<%= fb.id %>" style="display:inline">
+              <button type="submit" class="admin-btn admin-btn--approve">✓ Approve</button>
+            </form>
+            <% } else { %>
+            <form method="POST" action="/admin-feedback/reject/<%= fb.id %>" style="display:inline">
+              <button type="submit" class="admin-btn admin-btn--unpublish">↓ Unpublish</button>
+            </form>
+            <% } %>
+            <form method="POST" action="/admin-feedback/delete/<%= fb.id %>" style="display:inline" onsubmit="return confirm('Permanently delete this feedback?')">
+              <button type="submit" class="admin-btn admin-btn--delete">✕ Delete</button>
+            </form>
+          </div>
+
+          <form method="POST" action="/admin-feedback/reply/<%= fb.id %>" class="admin-reply-form">
+            <textarea name="reply" rows="2" placeholder="Add or update hospital reply…" maxlength="500"><%= fb.hospitalReply || '' %></textarea>
+            <button type="submit" class="admin-btn admin-btn--reply">Save Reply</button>
+          </form>
+        </div>
+        <% }); %>
+      </div>
+      <% } %>
+    </div>
+  </div>
+
+</body>
+</html>

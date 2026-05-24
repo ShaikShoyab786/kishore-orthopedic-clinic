@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTreatmentTabs();
   initContactForm();
   initScrollAnimations();
+  initTestimonialCarousel();
 });
 
 /* ---- Sticky Navbar + Hamburger ---- */
@@ -186,4 +187,131 @@ function initScrollAnimations() {
     el.classList.add('reveal');
     observer.observe(el);
   });
+}
+
+/* ---- Testimonial Carousel ---- */
+function initTestimonialCarousel() {
+  const carousel = document.getElementById('testimonialCarousel');
+  if (!carousel) return;
+
+  const wrapper = carousel.querySelector('.carousel-track-wrapper');
+  const track   = carousel.querySelector('.carousel-track');
+  const cards   = Array.from(track.querySelectorAll('.testimonial-card'));
+  const prevBtn = carousel.querySelector('.carousel-prev');
+  const nextBtn = carousel.querySelector('.carousel-next');
+  const dotsEl  = carousel.querySelector('.carousel-dots');
+
+  const total = cards.length;
+  if (total === 0) return;
+
+  let current   = 0;
+  let autoTimer = null;
+
+  function getPerView() {
+    if (window.innerWidth >= 900) return Math.min(3, total);
+    if (window.innerWidth >= 580) return Math.min(2, total);
+    return 1;
+  }
+
+  function getMaxIndex() {
+    return Math.max(0, total - getPerView());
+  }
+
+  function layout() {
+    const pv       = getPerView();
+    const gap      = 24; // px (matches 1.5rem at 16px base)
+    const width    = wrapper.offsetWidth;
+    const cardW    = (width - gap * (pv - 1)) / pv;
+
+    cards.forEach(card => {
+      card.style.width    = cardW + 'px';
+      card.style.minWidth = cardW + 'px';
+    });
+
+    track.style.gap = gap + 'px';
+    applyTransform(cardW, gap);
+    buildDots();
+    updateButtons();
+  }
+
+  function applyTransform(cardW, gap) {
+    const offset = current * (cardW + gap);
+    track.style.transform = 'translateX(-' + offset + 'px)';
+  }
+
+  function goTo(index) {
+    const max = getMaxIndex();
+    current = Math.max(0, Math.min(index, max));
+    const pv   = getPerView();
+    const gap  = 24;
+    const w    = wrapper.offsetWidth;
+    const cardW = (w - gap * (pv - 1)) / pv;
+    applyTransform(cardW, gap);
+    updateDots();
+    updateButtons();
+  }
+
+  function buildDots() {
+    if (!dotsEl) return;
+    dotsEl.innerHTML = '';
+    const max = getMaxIndex();
+    for (let i = 0; i <= max; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'carousel-dot' + (i === current ? ' active' : '');
+      btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      btn.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
+      dotsEl.appendChild(btn);
+    }
+  }
+
+  function updateDots() {
+    if (!dotsEl) return;
+    dotsEl.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  function updateButtons() {
+    if (prevBtn) prevBtn.disabled = current === 0;
+    if (nextBtn) nextBtn.disabled = current >= getMaxIndex();
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(() => {
+      const max = getMaxIndex();
+      goTo(current >= max ? 0 : current + 1);
+    }, 5000);
+  }
+
+  function stopAuto() {
+    if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+  }
+
+  prevBtn?.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+  nextBtn?.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+
+  carousel.addEventListener('mouseenter', stopAuto);
+  carousel.addEventListener('mouseleave', startAuto);
+
+  // Touch / swipe support
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      stopAuto();
+      goTo(diff > 0 ? current + 1 : current - 1);
+      startAuto();
+    }
+  }, { passive: true });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { current = Math.min(current, getMaxIndex()); layout(); }, 200);
+  });
+
+  layout();
+  startAuto();
 }

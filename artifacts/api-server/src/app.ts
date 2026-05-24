@@ -4,6 +4,7 @@ import cors from "cors";
 import pinoHttp from "pino-http";
 import router from "./routes";
 import websiteRouter from "./routes/website";
+import feedbackRouter from "./routes/feedback";
 import { logger } from "./lib/logger";
 
 const app: Express = express();
@@ -44,6 +45,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api", router);
+app.use("/", feedbackRouter);
 app.use("/", websiteRouter);
 
 export default app;
